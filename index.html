@@ -2,17 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
+    <meta name="viewport">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
 </head>
 <body>
-<div class="header-text">
-    <h1>Hello! This is Sarah!! </h1>
-    <p> I am happy that you seeing my projects.</p>
+    <div class="flex-container">
+        <select id="color-list" class="flex-item" disabled>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="purple">Purple</option>
+        </select>
+        <select id="size-list" class="flex-item" disabled>
+            <option value="current">Current</option>
+            <option value="small">Small</option>
+            <option value="large">Large</option>
+        </select>
+        <button class="flex-item" onclick=displayGridContent()>Shuffle</button>
 </div>
+
+<div class="grid-container">
     
-    
+    <script src="script.js"></script>
 </body>
 </html>
