@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid-container');
 const smallGrid = document.querySelector('.small-grid-container');
 const COLOR_OPTIONS = ['red', 'blue', 'green', 'yellow'];
-const SIZE_OPTIONS = ['small', 'medium', 'large'];
+const SIZE_OPTIONS = ['small', 'large'];
 const SHAPE_TYPES = ['circle', 'square', 'triangle', 'rect'];
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -59,10 +59,12 @@ function isGridShapesEqual() {
 
     const gridShapes = document.querySelectorAll('.grid-container .item div');
     const smallGridShapes = document.querySelectorAll('.small-grid-container .item div');
+    const alert = document.getElementById('alert');
 
     for (let i = 0; i < gridShapes.length; i++) {
         if (gridShapes[i].className !== smallGridShapes[i].className) {
-            console.log('Shape class name not equal');
+            alert.innerHTML = 'Shape class name not equal';
+            alert.style.display = "block";
             return false;
         } else if (gridShapes[i].style.backgroundColor !== smallGridShapes[i].style.backgroundColor) {
             console.log('Shape color not equal');
@@ -126,11 +128,9 @@ function changeShapeColor(shape, color) {
 }
 
 function changeShapeSize(shape, size) {
-    if (size === 'normal') {
-        shape.style.scale = '1';
-    }
+
     if (size === 'small') {
-        shape.style.scale = '0.5';
+        shape.style.scale = '0.7';
     }
 
     if (size === 'large') {

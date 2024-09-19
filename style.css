@@ -1,8 +1,16 @@
-* {
-  border: 1px solid #000;
-}
+
 h1 {
   font-size: 2rem;
+  text-align: center;
+}
+
+#alert {
+  display: none;
+  background-color: lightcoral;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -16,21 +24,23 @@ h1 {
 
 .check-btn:hover {
   background-color: darkorange;
-  
 }
 
 .main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+}
+
+.main-grid-item {
+  border: 2px solid #000;
   grid-gap: 0px;
 }
 .nested-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  align-items: center;
 }
 .flex-container {
   display: flex;
@@ -46,11 +56,11 @@ h1 {
   align-items: center;
   border: 1px solid #000;
   flex-basis: 100%;
+  height: 100px;
 
 }
 select{
-  width: 10vh; 
-  height: 10vh; 
+ 
   font-size: 50px; 
   }
 
@@ -60,16 +70,15 @@ select{
   grid-template-rows: 1fr 1fr 1fr;
   grid-column: 1 / span 2;
   height: 40vh;
-  grid-gap: 0px;
 }
 
 .small-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  height: 60vh;
+  height: 40vh;
   width: 40vh;
-  scale: 0.8;
+  scale: 0.6;
 }
 
 .item {
@@ -79,37 +88,37 @@ select{
   border: 1px solid #000;
 }
 
-#shape {
-  margin: 10px;
-}
-
 .selected {
   border: 3px dashed blue;
 }
 
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 80px; 
+  height: 80px; 
   border-radius: 50%;
   background-color: red;
+  margin: 20px; 
 }
 
 .square {
-  width: 100px;
-  height: 100px;
+  width: 50px; 
+  height: 50px; 
   background-color: green;
+  margin: 20px; 
 }
 
 .rect {
-  width: 10rem;
-  height: 5rem;
+  width: 100px; 
+  height: 45px; 
   background-color: blue;
+  margin: 20px; 
 }
 
 .triangle {
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid yellow;
-} 
+  border-left: 25px solid transparent; 
+  border-right: 25px solid transparent; 
+  border-bottom: 50px solid yellow; 
+  margin: 20px; 
+}
