@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="flex-container">
-        <select id="size-list" class="flex-item" disabled></select>
-        </select>
-        <select id="color-list" class="flex-item" disabled>
-        </select>
-        <button class="flex-item" onclick=displayGridContent()>Next</button>
-</div>
 
-<div class="grid-container">
+<body>
+    <div class="main-grid">
+        <div class="nested-flex main-grid-item">
+            <h1>Make This Grid</h1>
+            <div class="small-grid-container">
+            </div>
+            <button class="check-btn" onclick=isGridShapesEqual()>Check</button>
+        </div>
+    
+        <div class="main-grid-item">
+            <div class="flex-cotainer">
+                <div class="flex-item">
+                    <h1>Moves Made: <span id="movesCounter">0</span></h1>
+                </div>
+                <div class="flex-item">
+    
+                </div>
+                <div class="flex-item">
+                    <select id="color-list" class="flex-item" disabled>
+                        <option value="size">Choose Color</option>
+                    </select>
+                </div>
+                <div class="flex-item">
+                    <select id="size-list" class="flex-item" disabled>
+                        <option value="size">Choose Size</option>
+                
+                    </select>
+                </div>
+                </div>
+                </div>
+                <div class="grid-container main-grid-item">
+                
+                </div>
+                </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
